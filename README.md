@@ -1,4 +1,4 @@
-# E-commerce E2E Automation Project 🚀
+# E-commerce E2E Project 🚀
 
 This is an End-to-End (E2E) Automation Project using **Cypress** for testing the complete workflow of an E-commerce web application — from visiting the homepage to successfully checking out an order.
 
