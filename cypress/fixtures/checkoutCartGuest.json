@@ -1,0 +1,15 @@
+{
+  "url": "https://naveenautomationlabs.com/opencart/index.php?route=common/home",
+  "productName": "macbook",
+  "validUser": {
+    "firstName": "Ibrar",
+    "lastName": "Ahmad",
+    "email": "ibrar@gmail.com",
+    "telephone": "123456789",
+    "address1": "Johar Town",
+    "city": "Lahore",
+    "postcode": "16000",
+    "country": "Pakistan",
+    "region": "Punjab"
+  }
+}
