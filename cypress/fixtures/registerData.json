@@ -1,0 +1,10 @@
+{
+  "validUser": {
+    "firstName": "Ibrar",
+    "lastName": "Ahmad",
+    "email": "",
+    "telephone": "12333445678",
+    "password": "12345qwer",
+    "confirmPassword": "12345qwer"
+  }
+}

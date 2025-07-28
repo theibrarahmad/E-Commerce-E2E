@@ -10,7 +10,7 @@ before(() => {
 })
 
 describe('Guest Checkout - Positive Flow', () => {
-  it('should complete checkout successfully', () => {
+  it('TC10 - should complete checkout successfully', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
@@ -24,7 +24,7 @@ describe('Guest Checkout - Positive Flow', () => {
     cartPage.submitRegistration()
   })
   describe('Guest Checkout - Negative Register Flow', () => {
-    it('should show error when first name is empty', () => {
+    it('TC11 - should show error when first name is empty', () => {
       cartPage.visitHomePage()
       cartPage.searchProduct(checkoutGuestData.productName)
       cartPage.openFirstProductFromSearch()
@@ -53,7 +53,7 @@ describe('Guest Checkout - Positive Flow', () => {
     })
 
 
-    it('should show error when email format is invalid', () => {
+    it('TC12 - should show error when email format is invalid', () => {
       cartPage.visitHomePage()
       cartPage.searchProduct(checkoutGuestData.productName)
       cartPage.openFirstProductFromSearch()
@@ -71,7 +71,7 @@ describe('Guest Checkout - Positive Flow', () => {
         .and('contain', 'E-Mail address does not appear to be valid!')
     })
 
-    it('should show error when telephone number is too short', () => {
+    it('TC13 - should show error when telephone number is too short', () => {
       cartPage.visitHomePage()
       cartPage.searchProduct(checkoutGuestData.productName)
       cartPage.openFirstProductFromSearch()
@@ -89,7 +89,7 @@ describe('Guest Checkout - Positive Flow', () => {
         .and('contain', 'Telephone must be between 3 and 32 characters!')
     })
 
-    it('should show error when region is not selected', () => {
+    it('TC14 - should show error when region is not selected', () => {
       cartPage.visitHomePage()
       cartPage.searchProduct(checkoutGuestData.productName)
       cartPage.openFirstProductFromSearch()
@@ -106,7 +106,7 @@ describe('Guest Checkout - Positive Flow', () => {
         .should('be.visible')
         .and('contain', 'Please select a region / state!')
     })
-      it('should show error when telephone is empty', () => {
+      it('TC15 - should show error when telephone is empty', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
@@ -133,7 +133,7 @@ describe('Guest Checkout - Positive Flow', () => {
       .and('contain', 'Telephone must be between 3 and 32 characters!')
   })
 
-  it('should show error when last name is empty', () => {
+  it('TC16 - should show error when last name is empty', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
@@ -160,7 +160,7 @@ describe('Guest Checkout - Positive Flow', () => {
       .and('contain', 'Last Name must be between 1 and 32 characters!')
   })
 
-  it('should show error when Address 1 is empty', () => {
+  it('TC17 - should show error when Address 1 is empty', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
@@ -187,7 +187,7 @@ describe('Guest Checkout - Positive Flow', () => {
       .and('contain', 'Address 1 must be between 3 and 128 characters!')
   })
 
-  it('should show error when city is empty', () => {
+  it('TC18 - should show error when city is empty', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
@@ -214,7 +214,7 @@ describe('Guest Checkout - Positive Flow', () => {
       .and('contain', 'City must be between 2 and 128 characters!')
   })
 
-  it('should show error when country is not selected', () => {
+  it('TC19 - should show error when country is not selected', () => {
     cartPage.visitHomePage()
     cartPage.searchProduct(checkoutGuestData.productName)
     cartPage.openFirstProductFromSearch()
