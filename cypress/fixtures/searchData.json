@@ -1,0 +1,5 @@
+{
+  "validProducts": ["Macbook", "Macbook"],
+  "invalidProducts": ["camera", "watch", "car", "knife"],
+  "noResultsText": "There is no product that matches the search criteria."
+}

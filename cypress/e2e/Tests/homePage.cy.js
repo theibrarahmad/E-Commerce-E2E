@@ -15,17 +15,17 @@ describe('Home Page', () => {
     homePage.visitHomePage(data.url)
   })
 
-  it('TC01 - should display the logo', () => {
+  it('TC11 - should display the logo', () => {
     homePage.getLogo().should('be.visible')
   })
 
-  it('TC02 - should display search bar with correct placeholder', () => {
+  it('TC12 - should display search bar with correct placeholder', () => {
     homePage.getSearchBar()
       .should('be.visible')
       .and('have.attr', 'placeholder', data.searchPlaceholder)
   })
 
-  it('TC03 - should display the navigation menu with items', () => {
+  it('TC13 - should display the navigation menu with items', () => {
     homePage.getMenu()
       .should('be.visible')
       .within(() => {
@@ -33,31 +33,31 @@ describe('Home Page', () => {
       })
   })
 
-  it('TC04 - should display the main slideshow image', () => {
+  it('TC14 - should display the main slideshow image', () => {
     homePage.getSlideshowImage().should('be.visible')
   })
 
-  it('TC05 - should display alternate slide image', () => {
+  it('TC15 - should display alternate slide image', () => {
     homePage.getAltSlideImage().should('be.visible')
   })
 
-  it('TC06 - should display h3 headings with text', () => {
+  it('TC16 - should display h3 headings with text', () => {
     homePage.getHeadings()
       .should('exist')
       .and('not.have.text', '')
   })
 
-  it('TC07 - should display the featured products carousel', () => {
+  it('TC17 - should display the featured products carousel', () => {
     homePage.getCarousel()
       .should('exist')
       .and('be.visible')
   })
 
-  it('TC08 - should display the footer', () => {
+  it('TC18 - should display the footer', () => {
     homePage.getFooter().should('be.visible')
   })
 
-  it('TC09 - should display minimum number of footer links', () => {
+  it('TC19 - should display minimum number of footer links', () => {
     homePage.getFooterLinks().should('have.length.at.least', data.minFooterLinks)
   })
 })

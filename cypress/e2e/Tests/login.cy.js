@@ -8,7 +8,7 @@ before(() => {
 })
 
 describe('Login Functionality', () => {
-  it('TC01 - should login successfully with valid credentials', () => {
+  it('TC20 - should login successfully with valid credentials', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
     loginPage.openLoginPage()
@@ -21,7 +21,7 @@ describe('Login Functionality', () => {
     cy.get('#column-right').should('be.visible')
   })
 
-  it('TC02 - should show error for incorrect password', () => {
+  it('TC21 - should show error for incorrect password', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
     loginPage.openLoginPage()
@@ -34,7 +34,7 @@ describe('Login Functionality', () => {
       .and('contain', 'Warning: No match for E-Mail Address and/or Password.')
   })
 
-  it('TC03 - should show error for unregistered email', () => {
+  it('TC22 - should show error for unregistered email', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
     loginPage.openLoginPage()
@@ -47,7 +47,7 @@ describe('Login Functionality', () => {
       .and('contain', 'Warning: No match for E-Mail Address and/or Password.')
   })
 
-  it('TC04 - should show error when email is empty', () => {
+  it('TC23 - should show error when email is empty', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
     loginPage.openLoginPage()
@@ -59,7 +59,7 @@ describe('Login Functionality', () => {
       .and('contain', 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.')
   })
 
-  it('TC05 - should show error when password is empty', () => {
+  it('TC24 - should show error when password is empty', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
     loginPage.openLoginPage()

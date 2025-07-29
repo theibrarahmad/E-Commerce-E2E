@@ -12,7 +12,7 @@ before(() => {
 })
 
 describe('User Registration - Positive Test', () => {
-  it('TC01 - should register a new user successfully', () => {
+  it('TC25 - should register a new user successfully', () => {
     registerPage.visitHomePage()
     registerPage.openRegisterPage()
     registerPage.fillRegistrationForm(registerData.validUser)
@@ -29,7 +29,7 @@ describe('User Registration - Negative Test Cases', () => {
     registerPage.openRegisterPage()
   })
 
-  it('TC02 - should show error when first name is empty', () => {
+  it('TC26 - should show error when first name is empty', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     cy.get('#input-firstname').clear()
     registerPage.agreeToPolicy()
@@ -40,7 +40,7 @@ describe('User Registration - Negative Test Cases', () => {
       .and('contain', 'First Name must be between 1 and 32 characters!')
   })
 
-  it('TC03 - should show error when last name is empty', () => {
+  it('TC27 - should show error when last name is empty', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     cy.get('#input-lastname').clear()
     registerPage.agreeToPolicy()
@@ -51,7 +51,7 @@ describe('User Registration - Negative Test Cases', () => {
       .and('contain', 'Last Name must be between 1 and 32 characters!')
   })
 
-  it('TC04 - should show error when email is empty', () => {
+  it('TC28 - should show error when email is empty', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     cy.get('#input-email').clear()
     registerPage.agreeToPolicy()
@@ -63,7 +63,7 @@ describe('User Registration - Negative Test Cases', () => {
   })
 
 
-  it('TC05 - should show error when telephone is empty', () => {
+  it('TC29 - should show error when telephone is empty', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     cy.get('#input-telephone').clear()
     registerPage.agreeToPolicy()
@@ -74,7 +74,7 @@ describe('User Registration - Negative Test Cases', () => {
       .and('contain', 'Telephone must be between 3 and 32 characters!')
   })
 
-  it('TC06 - should show error when password is empty', () => {
+  it('TC30 - should show error when password is empty', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     cy.get('#input-password').clear()
     cy.get('#input-confirm').clear()
@@ -86,7 +86,7 @@ describe('User Registration - Negative Test Cases', () => {
       .and('contain', 'Password must be between 4 and 20 characters!')
   })
 
-  it('TC07 - should show error when confirm password does not match', () => {
+  it('TC31 - should show error when confirm password does not match', () => {
     registerPage.fillRegistrationForm({ ...registerData.validUser, confirmPassword: 'mismatch123' })
     registerPage.agreeToPolicy()
     registerPage.submitForm()
@@ -96,7 +96,7 @@ describe('User Registration - Negative Test Cases', () => {
       .and('contain', 'Password confirmation does not match password!')
   })
 
-  it('TC08 - should show error when privacy policy is not accepted', () => {
+  it('TC32 - should show error when privacy policy is not accepted', () => {
     registerPage.fillRegistrationForm(registerData.validUser)
     // Don't check the checkbox
     registerPage.submitForm()
