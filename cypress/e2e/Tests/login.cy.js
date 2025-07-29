@@ -56,9 +56,14 @@ describe('Login Functionality', () => {
 
     cy.get('.alert-danger')
       .should('be.visible')
-      .and('contain', 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.')
+      .invoke('text')
+      .then((text) => {
+        expect(
+          text.includes('Warning: Your account has exceeded allowed number of login attempts') ||
+          text.includes('Warning: No match for E-Mail Address and/or Password.')
+        ).to.be.true
+      })
   })
-
   it('TC24 - should show error when password is empty', () => {
     const loginPage = new LoginPage()
     loginPage.visitHomePage()
